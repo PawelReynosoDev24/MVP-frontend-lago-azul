@@ -263,7 +263,15 @@ const procesarEgreso = async (ubicacion) => {
 };
 
 const getColor = (ubicacion) => ubicacion.producto?.color_hex || '#ccc';
-const getFotoUrl = (filename) => filename ? `/uploads/${filename}` : null;
+// Antes:
+// const getFotoUrl = (filename) => filename ? `/uploads/${filename}` : null;
+
+// Después:
+const getFotoUrl = (filename) => {
+  if (!filename) return null;
+  if (filename.startsWith('http')) return filename; // URL de Cloudinary
+  return `/uploads/${filename}`; // Foto local antigua
+};
 </script>
 
 <template>
