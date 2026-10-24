@@ -49,9 +49,19 @@ onMounted(async () => {
 });
 
 // --- Helpers ---
+// Antes:
+// const getFotoUrl = (filename) => {
+//   if (!filename) return 'https://via.placeholder.com/150?text=Sin+Foto';
+//   return `/uploads/${filename}`;
+// };
+
+// Después:
 const getFotoUrl = (filename) => {
   if (!filename) return 'https://via.placeholder.com/150?text=Sin+Foto';
-  return `/uploads/${filename}`;
+  // Si es una URL de Cloudinary (empieza con http), la devolvemos tal cual
+  if (filename.startsWith('http')) return filename;
+  // Si es una foto vieja guardada localmente, usamos la ruta local
+  return `/uploads/${filename}`; 
 };
 
 const formatearFecha = (fechaStr) => {
