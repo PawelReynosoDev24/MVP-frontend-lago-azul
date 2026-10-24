@@ -24,3 +24,10 @@ Interfaz de usuario para el sistema de inventario Lago Azul.
 - **Build Command:** `npm run build`
 - **Output Directory:** `dist`
 - **Variables de entorno necesarias:** `VITE_API_URL` (URL del backend en Render, ej. `https://backend.onrender.com/api`).
+
+## Autor
+Creado por Pawel Alessandro Reynoso Marquez
+
+Proyecto iniciado: 20 de octubre del 2026
+
+Subido a Github: 23 de octubre del 2026
