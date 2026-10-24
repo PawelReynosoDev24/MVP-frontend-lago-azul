@@ -1,0 +1,8 @@
+/* src/style.css */
+:root {
+  font-family: system-ui, -apple-system, sans-serif;
+  color-scheme: light;
+}
+body {
+  margin: 0;
+}
